@@ -1,63 +1,68 @@
-package Sample;
+package SamplePgms;
+
 import java.util.*;
 
-class empl
+class emp1
 {
-	float sal;
+	float da,har,sal,gs;
+	
 	void display()
 	{
 		System.out.println("Name of class is Employee");
 	}
 	
-	int calcSalary(int s,int da,int h)
+	void calcSalary()
 	 {
-		 System.out.println("s:"+s+" da:"+da+" h:"+h);
-		 sal=s+s*(da/100)+s*(h/100);
 		 
-		 System.out.println("sal:"+sal);
-		 System.out.println("The Gross Salary of Employee is:"+sal);
-		 return (int) sal;
+		 gs=sal+sal*(da/100)+sal*(har/100);
+		 System.out.println("The Gross Salary of Employee is:"+gs);
+		 
 	
 	 }
 		
 }
-class Engineer extends empl
+class Engineer extends emp1
 {
 	
-	int s;
+	
 	
 	void display()
 	{
 		System.out.println("Name of class is Engineer");
 	}
 	
-	 int calcSalary(int sal,int d,int har)
+	 void calcSalary()
 	 {
 		 super.display();
-		 s=super.calcSalary(sal, d, har);
+		 super.calcSalary();
 		 display();
 		 
-		 System.out.println("The Gross Salary of Engineer is:"+2*s);
-		return 0;
+		 System.out.println("The Gross Salary of Engineer is:"+2*gs);
+		
 	 }
 		
 }
-public class emp {
+public class empl {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 Scanner obj=new Scanner(System.in);
-		 int d,har,s;
+		 int da,har,sal;
 		 System.out.println("Enter the basic salary of the employee:");
-		 s=obj.nextInt();
+		 sal=obj.nextInt();
 		 System.out.println("Enter the DA of the employee:");
-		 d=obj.nextInt();
+		 da=obj.nextInt();
 		 System.out.println("Enter the HRA of the employee:");
 		 har=obj.nextInt();
 		Engineer e=new Engineer();
-		e.calcSalary(s,d,har);
+		e.sal=sal;
+		e.da=da;e.har=har;
+		e.calcSalary();
 		 
 
 	}
 
 }
+	
+
+
