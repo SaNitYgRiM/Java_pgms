@@ -19,7 +19,11 @@ public class trycatch {
     {
     	System.out.println("/ by zero");
     }
-     System.out.println("End of Operation\nDo you want to continue y or n:");
+    finally
+    {
+     System.out.println("End of Operation");
+    }
+     System.out.println("Do you want to continue y or n:");
      a=obj.next();
 		}
      while(a.equalsIgnoreCase("y"));
