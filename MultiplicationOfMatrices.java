@@ -22,7 +22,7 @@ public class MultiplicationOfMatrices {
 	        for(int i=0;i<m;i++)
 	            for(int j=0;j<n;j++)
 	               a[i][j]=obj.nextInt();
-	        System.out.println("ENTER MATRIX B:\t");
+	        System.out.println("ENTER MATRIX 2:\t");
 	        for(int i=0;i<p;i++)
 	         for(int j=0;j<q;j++)
 	           b[i][j]=obj.nextInt();
@@ -35,7 +35,7 @@ public class MultiplicationOfMatrices {
 	        for(int i=0;i<m;i++)
 	        {
 	          for(int j=0;j<n;j++)
-	        	  System.out.print(a[i][j]+" ");
+	        	  System.out.print(pdt[i][j]+" ");
 	          System.out.print("\n");
 	        }  
 	    }
